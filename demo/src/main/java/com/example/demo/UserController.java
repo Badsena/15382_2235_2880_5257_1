@@ -15,9 +15,9 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@Valid @RequestBody User user) {
         if (userRepo.existsById(user.getEmail())) {
-            return ResponseEntity.badRequest().body("User already exists with this email.");
+            return ResponseEntity.badRequest().body("User already exists with this email");
         }
         userRepo.save(user);
-        return ResponseEntity.ok("User registered successfully.");
+        return ResponseEntity.ok("User registered successfully");
     }
 }

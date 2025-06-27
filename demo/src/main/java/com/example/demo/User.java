@@ -11,7 +11,7 @@ import jakarta.validation.constraints.NotBlank;
 public class User {
 
     @Id
-    @Email(message = "Invalid email forma")
+    @Email(message = "Invalid email format")
     private String email;
 
     @NotBlank(message = "Username is required")
